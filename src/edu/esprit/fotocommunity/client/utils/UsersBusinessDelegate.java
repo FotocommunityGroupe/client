@@ -84,6 +84,15 @@ public class UsersBusinessDelegate {
 
 		return usercmMgmRemote.findUser(idUser);
 	}
+	public static List<PremiumUser> findUser1() {
+
+		UsersMgmRemote usercmMgmRemote = (UsersMgmRemote) ServiceLocator
+				.getInstance()
+				.lookupProxy("/edu.esprit.fotocommunity.ejb/UsersMgm!edu.esprit.fotocommunity.ejb.services.UsersMgmRemote");
+
+		return   usercmMgmRemote.findAllUsers1();
+	}
+	
 	
 	
 //Suppression d'un basic user
@@ -117,5 +126,22 @@ public class UsersBusinessDelegate {
 
 		 return usercmMgmRemote.findAllUsers();
 	}
+	
+	
+/*	public void blockUser(int idBasicUser){
+		
+		
+		
+
+		UsersMgmRemote usercmMgmRemote = (UsersMgmRemote) ServiceLocator
+				.getInstance()
+				.lookupProxy("/edu.esprit.fotocommunity.ejb/UsersMgm!edu.esprit.fotocommunity.ejb.services.UsersMgmRemote");
+                 
+
+		
+		
+	}*/
+	
+	
 	
 }

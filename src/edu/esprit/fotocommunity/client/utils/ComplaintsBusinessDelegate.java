@@ -16,18 +16,17 @@ public class ComplaintsBusinessDelegate {
 
 			ReclamationRemote reclamationRemote = (ReclamationRemote) ServiceLocator
 					.getInstance()
-					.lookupProxy("/edu.esprit.fotocommunity.ejb/Reclamation!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
+					.lookupProxy("/edu.esprit.fotocommunity.ejb/ReclamationMgm!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
 
 			reclamationRemote.addComplaint(rec);
 		}
-		
 		
 		//Suppression d'une reclamation
 		public static void deleteReclamation (Reclamation rec) {
 
 			ReclamationRemote reclamationRemote = (ReclamationRemote) ServiceLocator
 					.getInstance()
-					.lookupProxy("/edu.esprit.fotocommunity.ejb/Reclamation!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
+					.lookupProxy("/edu.esprit.fotocommunity.ejb/ReclamationMgm!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
 
 			reclamationRemote.deleteComplaint(rec);
 		}
@@ -39,7 +38,7 @@ public class ComplaintsBusinessDelegate {
 
 			ReclamationRemote reclamationRemote = (ReclamationRemote) ServiceLocator
 					.getInstance()
-					.lookupProxy("/edu.esprit.fotocommunity.ejb/Reclamation!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
+					.lookupProxy("/edu.esprit.fotocommunity.ejb/ReclamationMgm!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
 
 			 return reclamationRemote.findAllReclamation();
 		}
@@ -52,7 +51,7 @@ public class ComplaintsBusinessDelegate {
 
 			ReclamationRemote reclamationRemote = (ReclamationRemote) ServiceLocator
 					.getInstance()
-					.lookupProxy("/edu.esprit.fotocommunity.ejb/Reclamation!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
+					.lookupProxy("/edu.esprit.fotocommunity.ejb/ReclamationMgm!edu.esprit.fotocommunity.ejb.services.ReclamationRemote");
 
 			return reclamationRemote.findReclamation(idReclamation);
 		}
