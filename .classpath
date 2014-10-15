@@ -3,8 +3,11 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/jboss-client.jar"/>
 	<classpathentry kind="lib" path="lib/hibernate-core-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="lib/appserv-rt-4.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/javaee.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/edu.esprit.fotocommunity.ejb"/>
 	<classpathentry kind="lib" path="C:/JEE_TOOLS/jboss-as-7.1.1.Final/modules/org/hibernate/main/hibernate-core-4.0.1.Final.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

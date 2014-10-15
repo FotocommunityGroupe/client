@@ -10,16 +10,22 @@ import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+
 import java.awt.List;
 import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Panel;
+
 import javax.swing.ImageIcon;
+import javax.swing.JTable;
+
+import edu.esprit.fotocommunity.client.Models.ReclamationModel;
 
 public class ComplaintUI extends JFrame {
 
 	private JPanel contentPane;
+	private JTable tableComplaints;
 
 	/**
 	 * Launch the application.
@@ -52,10 +58,6 @@ public class ComplaintUI extends JFrame {
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
-		
-		List list = new List();
-		list.setBounds(46, 84, 221, 207);
-		panel.add(list);
 		
 		JLabel lblNewLabel = new JLabel("List of complaints");
 		lblNewLabel.setBounds(107, 50, 152, 14);
@@ -101,5 +103,11 @@ public class ComplaintUI extends JFrame {
 		Button button_3 = new Button("Alert");
 		button_3.setBounds(457, 322, 70, 22);
 		panel.add(button_3);
+		
+		tableComplaints = new JTable();
+		tableComplaints.setBounds(10, 89, 310, 213);
+		tableComplaints.setModel(new ReclamationModel());
+		panel.add(tableComplaints);
+		
 	}
 }
